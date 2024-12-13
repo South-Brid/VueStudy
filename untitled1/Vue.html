@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id = 'app'>
+<!--  差值表达式只是文本-->
+  {{msg}}
+<!--  使用div指令-->
+  <div v-html="msg"></div>
+  <div v-show="vshow">v-show:一杯乌龙茶</div>
+  <div v-if="ifshow">v-if:两杯乌龙茶</div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.7.16/dist/vue.js"></script>
+
+<script>
+  const app = new Vue({
+    el: '#app',
+    data: {
+      msg:`<a href="https://www.bilibili.com/">B站官网</a>`,
+      vshow:true,
+      ifshow:true
+    }
+  });
+</script>
+</body>
+</html>

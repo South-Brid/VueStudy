@@ -5,6 +5,26 @@
     <title>Title</title>
 </head>
 <body>
+<div id = "app">
+    <p>{{"朋友名字"+friend.name}}</p>
+</div>
 
+<script src="https://cdn.jsdelivr.net/npm/vue@2.7.16/dist/vue.js"></script>
+<script>
+    //1.创建app实例
+    const app = new Vue({
+        el: '#app',
+        data:{
+            msg:"hello",
+            age:18,
+            friend: {
+                name:'sqt'
+            }
+        }
+    });
+    //2.修改数据 界面会同步更新
+    app.friend.name = "1000"
+
+</script>
 </body>
 </html>
